@@ -202,6 +202,15 @@ html.light-mode .footer-credit-logo {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* ---------- NAV ACTIONS (theme toggle + burger grouped) ---------- */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  margin-left: auto; /* pushes group to far right on desktop */
+}
+
 /* ---------- THEME TOGGLE BUTTON ---------- */
 .theme-toggle {
   background: none;
@@ -226,7 +235,7 @@ html.light-mode .footer-credit-logo {
 .theme-toggle .toggle-icon { font-style: normal; }
 
 @media (max-width: 768px) {
-  .theme-toggle {
+  .nav-actions {
     z-index: 301;
     position: relative;
   }
