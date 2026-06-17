@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f0d14" />
+  <meta name="description" content="Tiana Luck's bookshelf — current reads, all-time favourites, and the stories that shaped her writing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="My Reads — Tiana Luck" />
+  <meta property="og:description" content="Tiana Luck's bookshelf — current reads, all-time favourites, and the stories that shaped her writing." />
+  <meta property="og:image" content="images/brand/social-icon.png" />
+  <meta property="og:url" content="https://tianaluck.co.za/reads.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="My Reads — Tiana Luck" />
+  <meta name="twitter:description" content="Tiana Luck's bookshelf — current reads, all-time favourites, and the stories that shaped her writing." />
+  <meta name="twitter:image" content="images/brand/social-icon.png" />
+  <title>My Reads — Tiana Luck</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/brand/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/brand/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/brand/apple-touch-icon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('light-mode');</script>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="fog-layer" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo" aria-label="Tiana Luck — Home">
+        <img src="images/brand/tiana-luck-logo-dark.png" alt="Tiana Luck" class="nav-logo-img nav-logo-dark" />
+        <img src="images/brand/tiana-luck-logo-light.png" alt="Tiana Luck" class="nav-logo-img nav-logo-light" />
+      </a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode"><em class="toggle-icon">🌙</em></button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="vlog.html">Vlog</a></li>
+        <li><a href="reads.html" class="active">My Reads</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-hero reads-page-hero">
+    <div class="reads-hero-bg" aria-hidden="true">
+      <img src="images/reads-page-header-bg-dark.png" alt="" class="reads-bg-img reads-bg-dark" />
+      <img src="images/reads-page-header-bg-light.jpg" alt="" class="reads-bg-img reads-bg-light" />
+    </div>
+    <div class="reads-hero-overlay" aria-hidden="true"></div>
+    <div class="reads-hero-content">
+      <p class="page-hero-eyebrow">The Bookshelf</p>
+      <h1 class="page-hero-title">My Reads</h1>
+      <p class="page-hero-sub">A writer who doesn&rsquo;t read is like a cook who doesn&rsquo;t eat. These are the books living on Tiana&rsquo;s shelf right now.</p>
+    </div>
+  </div>
+
+  <section class="section" style="background:var(--black);">
+    <div class="container">
+
+      <p class="reads-intro">
+        I read across every genre I can get my hands on &mdash; horror, fantasy, romance, mystery, contemporary. Every book I read teaches me something about the kind of author I want to become.
+      </p>
+
+      <!-- Currently Reading -->
+      <div class="shelf-section">
+        <div class="shelf-title">
+          <span style="color:var(--accent);">&#9679;</span> Currently Reading
+        </div>
+        <div class="reads-grid">
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#1a0a2e,#2d1045);">
+              <div class="read-spine-text" style="color:#d4a8ff;">Mexican Gothic</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Silvia Moreno-Garcia</div>
+              <div class="read-title-small">Mexican Gothic</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">Creeping dread done perfectly. The house itself is the villain. This is the gothic atmosphere I'm reaching for in Before Dawn.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Favourites -->
+      <div class="shelf-section">
+        <div class="shelf-title">&#9733; All-Time Favourites</div>
+        <div class="reads-grid">
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#0a1a0a,#1a3010);">
+              <div class="read-spine-text" style="color:#80e080;">The Hunger Games</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Suzanne Collins</div>
+              <div class="read-title-small">The Hunger Games</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">The first series that taught me a story can be fast-paced AND emotionally devastating at the same time.</p>
+            </div>
+          </div>
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#200a0a,#3a1010);">
+              <div class="read-spine-text" style="color:#ffb0b0;">Coraline</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Neil Gaiman</div>
+              <div class="read-title-small">Coraline</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">Short, perfectly shaped, genuinely scary. Gaiman writes dread the way I want to one day.</p>
+            </div>
+          </div>
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#0a1428,#102040);">
+              <div class="read-spine-text" style="color:#80c4ff;">Percy Jackson</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Rick Riordan</div>
+              <div class="read-title-small">Percy Jackson Series</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">The voice. The humour. The world-building hidden inside adventure. I've read these five times minimum.</p>
+            </div>
+          </div>
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#1a0a20,#2d1050);">
+              <div class="read-spine-text" style="color:#c8a0ff;">A Good Girl's Guide to Murder</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Holly Jackson</div>
+              <div class="read-title-small">A Good Girl's Guide to Murder</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">I finished this in one night. The mystery structure is incredible &mdash; every chapter pays off something from three chapters earlier.</p>
+            </div>
+          </div>
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#201010,#3a2010);">
+              <div class="read-spine-text" style="color:#ffa080;">The Maze Runner</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">James Dashner</div>
+              <div class="read-title-small">The Maze Runner</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+              <p class="read-review">The mystery box structure &mdash; drip-feeding information to keep you reading &mdash; is something I used directly in Before Dawn.</p>
+            </div>
+          </div>
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#0a1a18,#102820);">
+              <div class="read-spine-text" style="color:#80d8c8;">An Ember in the Ashes</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Sabaa Tahir</div>
+              <div class="read-title-small">An Ember in the Ashes</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">Dual POV done perfectly. Both characters are equally compelling and the world feels massive and real.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Recently Read -->
+      <div class="shelf-section">
+        <div class="shelf-title">&#9632; Recently Read</div>
+        <div class="reads-grid">
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#1a1a0a,#2a280a);">
+              <div class="read-spine-text" style="color:#e0d080;">They Both Die at the End</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Adam Silvera</div>
+              <div class="read-title-small">They Both Die at the End</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">The premise tells you exactly how it ends and you read it anyway. That's craft.</p>
+            </div>
+          </div>
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#0a180a,#102810);">
+              <div class="read-spine-text" style="color:#90e090;">The Inheritance Games</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Jennifer Lynn Barnes</div>
+              <div class="read-title-small">The Inheritance Games</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+              <p class="read-review">Genuinely addictive. Solved two of the puzzles before the reveal and was still surprised by the ending.</p>
+            </div>
+          </div>
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#180a18,#28102a);">
+              <div class="read-spine-text" style="color:#e0a0e0;">Legendborn</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Tracy Deonn</div>
+              <div class="read-title-small">Legendborn</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">Arthurian legend + American history + mystery. The scope is incredible and Bree is one of my favourite YA protagonists.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Want to Read -->
+      <div class="shelf-section">
+        <div class="shelf-title">&#9675; Want to Read Next</div>
+        <div class="reads-grid">
+          <div class="read-card" style="opacity:0.7;">
+            <div class="read-spine" style="background:var(--surface);">
+              <div class="read-spine-text" style="color:var(--muted);">House of Salt and Sorrows</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Erin A. Craig</div>
+              <div class="read-title-small">House of Salt and Sorrows</div>
+              <div class="read-rating" style="color:var(--muted);">On the list</div>
+            </div>
+          </div>
+          <div class="read-card" style="opacity:0.7;">
+            <div class="read-spine" style="background:var(--surface);">
+              <div class="read-spine-text" style="color:var(--muted);">The Cruel Prince</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Holly Black</div>
+              <div class="read-title-small">The Cruel Prince</div>
+              <div class="read-rating" style="color:var(--muted);">On the list</div>
+            </div>
+          </div>
+          <div class="read-card" style="opacity:0.7;">
+            <div class="read-spine" style="background:var(--surface);">
+              <div class="read-spine-text" style="color:var(--muted);">Six of Crows</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Leigh Bardugo</div>
+              <div class="read-title-small">Six of Crows</div>
+              <div class="read-rating" style="color:var(--muted);">On the list</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- If You Liked Before Dawn -->
+      <div class="shelf-section">
+        <div class="shelf-title" style="color:var(--accent);">&#9670; If You Liked Before Dawn, Try These</div>
+        <p style="color:var(--muted); margin-bottom:1.5rem; font-family:var(--ff-fell); font-style:italic;">Same fog. Same dread. Same can&rsquo;t-put-it-down feeling.</p>
+        <div class="reads-grid">
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#1a0a2e,#2d1045);">
+              <div class="read-spine-text" style="color:#d4a8ff;">Mexican Gothic</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Silvia Moreno-Garcia</div>
+              <div class="read-title-small">Mexican Gothic</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">Gothic atmosphere, creeping dread, a house that feels alive. If you loved the fog in Before Dawn, this is your next read.</p>
+            </div>
+          </div>
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#200a0a,#3a1010);">
+              <div class="read-spine-text" style="color:#ffb0b0;">Coraline</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Neil Gaiman</div>
+              <div class="read-title-small">Coraline</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">A world with rules that seem helpful until they&rsquo;re not. Short, perfectly shaped, and genuinely scary.</p>
+            </div>
+          </div>
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#0a1428,#102040);">
+              <div class="read-spine-text" style="color:#80c4ff;">The Merciless</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Danielle Vega</div>
+              <div class="read-title-small">The Merciless</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+              <p class="read-review">YA horror with real teeth. New girl, strange town, secrets that shouldn&rsquo;t exist. Fans of Before Dawn&rsquo;s atmosphere will feel right at home.</p>
+            </div>
+          </div>
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#0e1a0e,#162610);">
+              <div class="read-spine-text" style="color:#90e890;">The Forest of Hands and Teeth</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Carrie Ryan</div>
+              <div class="read-title-small">The Forest of Hands and Teeth</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">An isolated community, rules that protect them, and the terrifying thing just beyond the boundary. Sound familiar?</p>
+            </div>
+          </div>
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#181018,#201428);">
+              <div class="read-spine-text" style="color:#e0a0ff;">Plain Bad Heroines</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Emily M. Danforth</div>
+              <div class="read-title-small">Plain Bad Heroines</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">Dual timeline, gothic horror, a cursed school. Rich atmosphere and mystery that layers perfectly — for fans who want more complexity after Before Dawn.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Anime Picks -->
+      <div class="shelf-section">
+        <div class="shelf-title">&#9733; Anime Picks (Because They Count)</div>
+        <p style="color:var(--muted); margin-bottom:1.5rem; font-family:var(--ff-fell); font-style:italic;">These aren&rsquo;t books, but they&rsquo;ve shaped my storytelling more than most books have.</p>
+        <div class="reads-grid">
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#2a0808,#180408);">
+              <div class="read-spine-text" style="color:#ff8080;">Attack on Titan</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Hajime Isayama</div>
+              <div class="read-title-small">Attack on Titan</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">The unreliable narrator and the way the story recontextualises everything you thought you knew — masterclass in long-form plotting.</p>
+            </div>
+          </div>
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#200820,#100812);">
+              <div class="read-spine-text" style="color:#e080e0;">Your Lie in April</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Naoshi Arakawa</div>
+              <div class="read-title-small">Your Lie in April</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">Taught me that heartbreak, if earned properly, is the most powerful emotional tool a storyteller has. I cried for an hour.</p>
+            </div>
+          </div>
+
+          <div class="read-card">
+            <div class="read-spine" style="background:linear-gradient(145deg,#0a0a20,#0a1030);">
+              <div class="read-spine-text" style="color:#8080ff;">Demon Slayer</div>
+            </div>
+            <div class="read-info">
+              <div class="read-author">Koyoharu Gotouge</div>
+              <div class="read-title-small">Demon Slayer</div>
+              <div class="read-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="read-review">Visual storytelling at its best. The emotional gut-punches come from character investment, not shock value. I study this constantly.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="newsletter-strip">
+    <div class="container newsletter-inner">
+      <div>
+        <h3>Reading updates every month</h3>
+        <p>Subscribe for Tiana&rsquo;s latest reads, mini-reviews, and bookish thoughts.</p>
+      </div>
+      <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+        <input type="email" placeholder="your@email.com" required aria-label="Email address" />
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Tiana Luck — Home">
+        <img src="images/brand/tiana-luck-logo-dark.png" alt="Tiana Luck" class="nav-logo-img nav-logo-dark" />
+        <img src="images/brand/tiana-luck-logo-light.png" alt="Tiana Luck" class="nav-logo-img nav-logo-light" />
+      </a>
+        <p>Young author. Big imagination. Stories still unfolding.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="books.html">Books</a>
+        <a href="blog.html">Blog</a>
+        <a href="vlog.html">Vlog</a>
+        <a href="reads.html">My Reads</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Connect</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram" class="social-icon">&#9824;</a>
+        <a href="#" aria-label="TikTok" class="social-icon">&#9827;</a>
+        <a href="#" aria-label="YouTube" class="social-icon">&#9826;</a>
+        <a href="#" aria-label="Wattpad" class="social-icon">&#9825;</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Tiana Luck. All rights reserved.</p>
+      <p class="footer-credit">
+        Developed by
+        <a href="https://mrhdigital.co.uk" target="_blank" rel="noopener noreferrer" class="footer-credit-link">
+          <picture>
+            <source srcset="images/mrh-digital-logo-transparent.webp" type="image/webp" />
+            <img src="images/mrh-digital-logo-transparent.png" alt="Mr H Digital" class="footer-credit-logo" />
+          </picture>
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

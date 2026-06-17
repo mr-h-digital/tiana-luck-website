@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f0d14" />
+  <meta name="description" content="Tiana Luck — young author of Before Dawn, a supernatural mystery novel. Read chapters, follow the blog, and join the reader community." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tiana Luck — Author" />
+  <meta property="og:description" content="Young author of Before Dawn — a supernatural mystery where a girl stranded in a fog-shrouded town must survive until dawn. Chapters 1–3 available now." />
+  <meta property="og:image" content="images/brand/social-icon.png" />
+  <meta property="og:url" content="https://tianaluck.co.za/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tiana Luck — Author" />
+  <meta name="twitter:description" content="Young author of Before Dawn — a supernatural mystery where a girl stranded in a fog-shrouded town must survive until dawn." />
+  <meta name="twitter:image" content="images/brand/social-icon.png" />
+  <title>Tiana Luck — Author</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/brand/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/brand/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/brand/apple-touch-icon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('light-mode');document.documentElement.style.setProperty('--hero-min-h','100dvh'||'100vh');</script>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Fog particles background -->
+  <div id="fog-layer" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo" aria-label="Tiana Luck — Home">
+        <img src="images/brand/tiana-luck-logo-dark.png" alt="Tiana Luck" class="nav-logo-img nav-logo-dark" />
+        <img src="images/brand/tiana-luck-logo-light.png" alt="Tiana Luck" class="nav-logo-img nav-logo-light" />
+      </a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode"><em class="toggle-icon">🌙</em></button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="vlog.html">Vlog</a></li>
+        <li><a href="reads.html">My Reads</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+
+    <!-- Cinematic video background -->
+    <div class="hero-bg" aria-hidden="true">
+      <video class="bg-video bg-video-dark" src="videos/forest-dark.mp4" autoplay muted loop playsinline preload="auto"></video>
+      <video class="bg-video bg-video-light" src="videos/forest-light.mp4" autoplay muted loop playsinline preload="auto"></video>
+    </div>
+
+    <!-- Gradient overlay for text readability -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <!-- Foreground content -->
+    <div class="hero-content">
+      <div class="hero-glass">
+        <p class="hero-eyebrow">Welcome to the world of</p>
+        <h1 class="hero-title">
+          <picture class="hero-logo-picture">
+            <img src="images/brand/tiana-luck-logo-dark.png" alt="Tiana Luck" class="hero-logo-img hero-logo-dark" />
+            <img src="images/brand/tiana-luck-logo-light.png" alt="Tiana Luck" class="hero-logo-img hero-logo-light" />
+          </picture>
+        </h1>
+        <p class="hero-tagline">Stories that stay with you long after the last page.</p>
+        <div class="hero-cta-group">
+          <a href="books.html" class="btn btn-primary">Read My Work</a>
+          <a href="about.html" class="btn btn-ghost">About Me</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+  </section>
+
+  <!-- Featured Book -->
+  <section class="section featured-book">
+    <div class="container">
+      <div class="section-label">Latest Work</div>
+      <div class="featured-book-grid">
+        <div class="book-cover-wrap">
+          <div class="real-cover-wrap">
+            <img src="images/before_dawn_cover.png" alt="Before Dawn by Tiana Luck — book cover" class="real-cover-img" />
+          </div>
+        </div>
+        <div class="featured-info">
+          <h2 class="featured-title">Before Dawn</h2>
+          <div class="genre-tags">
+            <span class="tag">Supernatural Fiction</span>
+            <span class="tag">Mystery</span>
+            <span class="tag">Horror</span>
+          </div>
+          <p class="featured-excerpt">
+            The fog started just after midnight.<br /><br />
+            When Yuki's car dies on a mountain road and her phone goes dark, she finds herself in a town with no signal, no mirrors, and one rule she'll struggle to follow: <em>never leave your house after dawn.</em><br /><br />
+            As strange shadows press against her windows and reflections show faces that aren't hers, Yuki realises the rules weren't put in place to keep her inside — they were put there to keep something out.
+          </p>
+          <div class="featured-status">
+            <span class="status-dot"></span>
+            <span>In Progress &mdash; Chapters 1&ndash;3 available now</span>
+          </div>
+          <a href="books.html#before-dawn" class="btn btn-primary">Read Chapters</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser Quote -->
+  <section class="quote-banner">
+    <div class="container">
+      <blockquote class="pull-quote">
+        <div class="pull-quote-inner">
+          <p>"They shouldn't have reached you that quickly."</p>
+          <footer>&mdash; Flora, <cite>Before Dawn</cite></footer>
+        </div>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Latest Updates -->
+  <section class="section updates">
+    <div class="container">
+      <div class="section-label">What&rsquo;s New</div>
+      <h2 class="section-title">Latest Updates</h2>
+      <div class="updates-grid">
+
+        <article class="update-card">
+          <div class="update-type blog">Blog</div>
+          <h3><a href="blog.html#post-1">How Fog Inspired Before Dawn</a></h3>
+          <p>I wrote the opening scene of Before Dawn at 2am during a power outage. Here&rsquo;s how real atmosphere becomes fictional dread...</p>
+          <a href="blog.html#post-1" class="read-more">Read post &rarr;</a>
+        </article>
+
+        <article class="update-card">
+          <div class="update-type vlog">Vlog</div>
+          <h3><a href="vlog.html#ep-1">Writing Routine + Current WIP</a></h3>
+          <p>Come write with me! I share my late-night writing setup and drop a few hints about what comes after Chapter 3 of Before Dawn...</p>
+          <a href="vlog.html#ep-1" class="read-more">Watch episode &rarr;</a>
+        </article>
+
+        <article class="update-card">
+          <div class="update-type book">New Read</div>
+          <h3><a href="reads.html">Currently Reading: <em>Mexican Gothic</em></a></h3>
+          <p>Silvia Moreno-Garcia is a master of creeping dread. This book is exactly the kind of gothic I want to write one day...</p>
+          <a href="reads.html" class="read-more">See my shelf &rarr;</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Coming Soon / Hype -->
+  <section class="section coming-soon">
+    <div class="container">
+      <div class="section-label">Coming Soon</div>
+      <h2 class="section-title">Something Is Coming</h2>
+      <p class="coming-desc">Chapters 4 &amp; 5 of <em>Before Dawn</em> are in progress. The town's secrets go deeper than the fog. Yuki is about to learn why Flora hesitates to answer her questions — and why the faceless figures wait at dawn instead of crossing over in darkness.</p>
+      <div class="hype-bar">
+        <span class="hype-label">Chapter 4 progress</span>
+        <div class="hype-track">
+          <div class="hype-fill" style="--progress: 65%"></div>
+        </div>
+        <span class="hype-pct">65%</span>
+      </div>
+      <a href="contact.html#newsletter" class="btn btn-primary">Get Notified When It Drops</a>
+    </div>
+  </section>
+
+  <!-- Newsletter Strip -->
+  <section class="newsletter-strip">
+    <div class="container newsletter-inner">
+      <div>
+        <h3>Stay in the Fog</h3>
+        <p>Join Tiana&rsquo;s reader list for new chapters, blog posts, and writing news.</p>
+      </div>
+      <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletter(event)">
+        <input type="email" placeholder="your@email.com" required aria-label="Email address" />
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Tiana Luck — Home">
+        <img src="images/brand/tiana-luck-logo-dark.png" alt="Tiana Luck" class="nav-logo-img nav-logo-dark" />
+        <img src="images/brand/tiana-luck-logo-light.png" alt="Tiana Luck" class="nav-logo-img nav-logo-light" />
+      </a>
+        <p>Young author. Big imagination. Stories still unfolding.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="books.html">Books</a>
+        <a href="blog.html">Blog</a>
+        <a href="vlog.html">Vlog</a>
+        <a href="reads.html">My Reads</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Connect</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram" class="social-icon">&#9824;</a>
+        <a href="#" aria-label="TikTok" class="social-icon">&#9827;</a>
+        <a href="#" aria-label="YouTube" class="social-icon">&#9826;</a>
+        <a href="#" aria-label="Wattpad" class="social-icon">&#9825;</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Tiana Luck. All rights reserved.</p>
+      <p class="footer-credit">
+        Developed by
+        <a href="https://mrhdigital.co.uk" target="_blank" rel="noopener noreferrer" class="footer-credit-link">
+          <picture>
+            <source srcset="images/mrh-digital-logo-transparent.webp" type="image/webp" />
+            <img src="images/mrh-digital-logo-transparent.png" alt="Mr H Digital" class="footer-credit-logo" />
+          </picture>
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
