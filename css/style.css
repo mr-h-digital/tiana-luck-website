@@ -2938,3 +2938,106 @@ html.light-mode .connect-page-hero .page-hero-sub     { color: rgba(26,5,16,0.72
   margin-top: 0.75rem;
   font-style: italic;
 }
+
+/* ==========================================================
+   ABOUT PAGE — body name heading (h2 replacing duplicate h1)
+   ========================================================== */
+.about-body-name {
+  font-family: var(--ff-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+html.light-mode .about-body-name { color: var(--black); }
+
+/* ==========================================================
+   ABOUT PAGE — sticky note dark mode fix
+   ========================================================== */
+.sticky-note {
+  background: #fffde0;
+  color: #2a2020;
+  border-radius: 3px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 3px 4px 10px rgba(0,0,0,0.35);
+  transform: rotate(0.8deg);
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+html.light-mode .sticky-note {
+  box-shadow: 3px 4px 10px rgba(0,0,0,0.15);
+}
+/* Dark mode: neutral dark card so it doesn't blind users */
+@media not all {
+  /* fallback — overridden below */
+}
+html:not(.light-mode) .sticky-note {
+  background: var(--card);
+  color: var(--white);
+  border: 1px solid var(--border);
+}
+html:not(.light-mode) .sticky-note .sticky-note-heading {
+  color: var(--accent);
+}
+html:not(.light-mode) .sticky-note li {
+  color: var(--text);
+}
+.sticky-note-heading {
+  font-family: var(--ff-handwrite);
+  font-size: 1.1rem;
+  color: #8844aa;
+  margin-bottom: 0.75rem;
+}
+.sticky-note ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+}
+.sticky-note li {
+  font-family: var(--ff-handwrite);
+  font-size: 1.05rem;
+  color: #3a3030;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ==========================================================
+   CHAPTER ACCORDION — button reset + min tap target
+   ========================================================== */
+button.chapter-item {
+  width: 100%;
+  text-align: left;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: inherit;
+  font: inherit;
+  min-height: 56px;
+  cursor: pointer;
+}
+button.chapter-item:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.chapter-item--locked {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ==========================================================
+   ACCESSIBILITY — screen-reader only utility
+   ========================================================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}

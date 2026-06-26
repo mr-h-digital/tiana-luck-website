@@ -263,7 +263,10 @@ function handleReview(e) {
 function toggleExcerpt(id) {
   const box = document.getElementById(id);
   if (!box) return;
-  box.style.display = box.style.display === 'none' ? 'block' : 'none';
+  const isOpen = box.style.display !== 'none';
+  box.style.display = isOpen ? 'none' : 'block';
+  const btn = document.querySelector(`[aria-controls="${id}"]`);
+  if (btn) btn.setAttribute('aria-expanded', String(!isOpen));
 }
 
 // --- Toast helper ---

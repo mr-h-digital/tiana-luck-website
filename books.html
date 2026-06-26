@@ -111,13 +111,13 @@
           <!-- Chapter list -->
           <div class="section-label" style="margin-top:2rem;">Available Chapters</div>
           <div class="chapter-list">
-            <div class="chapter-item" onclick="toggleExcerpt('ch1')">
+            <button class="chapter-item" onclick="toggleExcerpt('ch1')" aria-expanded="false" aria-controls="ch1">
               <div>
                 <div class="chapter-num">Chapter 1</div>
                 <div class="chapter-name">Welcome Home</div>
               </div>
-              <span class="chapter-arrow">&#9660;</span>
-            </div>
+              <span class="chapter-arrow" aria-hidden="true">&#9660;</span>
+            </button>
             <div class="excerpt-box" id="ch1" style="display:none;">
               <p>The fog started just after midnight. Yuki noticed it slowly at first. Thin streams drifting across the road beneath her headlights, curling like smoke between the trees...</p>
               <p>She barely paid attention to it. Cape roads got fog sometimes. It wasn't strange. At least, not at first. But the farther she drove, the thicker it became. Soon the forest beside the road vanished entirely behind layers of pale gray mist...</p>
@@ -125,38 +125,38 @@
               <p><em>Then she saw the sign. WELCOME HOME.</em></p>
             </div>
 
-            <div class="chapter-item" onclick="toggleExcerpt('ch2')">
+            <button class="chapter-item" onclick="toggleExcerpt('ch2')" aria-expanded="false" aria-controls="ch2">
               <div>
                 <div class="chapter-num">Chapter 2</div>
                 <div class="chapter-name">Stay Inside</div>
               </div>
-              <span class="chapter-arrow">&#9660;</span>
-            </div>
+              <span class="chapter-arrow" aria-hidden="true">&#9660;</span>
+            </button>
             <div class="excerpt-box" id="ch2" style="display:none;">
               <p>The house was warmer than Yuki expected. Not cozy, not welcoming, just warm. Like it had been waiting. She stepped inside slowly, the door closing behind her with a soft, final click that echoed a little too long in the narrow hallway...</p>
               <p>There were no mirrors. Not in the hallway. Not in the living room. Not even a small one near the door. Nowhere. Yuki let out a quiet breath. <em>Okay. That's intentional.</em></p>
               <p>She plugged in her phone. The screen flickered. Then — the front camera turned on. Her reflection filled the screen, dim, grainy. The soft yellow light behind her casting long shadows across her face... Then something moved behind her.</p>
             </div>
 
-            <div class="chapter-item" onclick="toggleExcerpt('ch3')">
+            <button class="chapter-item" onclick="toggleExcerpt('ch3')" aria-expanded="false" aria-controls="ch3">
               <div>
                 <div class="chapter-num">Chapter 3</div>
                 <div class="chapter-name">Knock, Knock, Knock</div>
               </div>
-              <span class="chapter-arrow">&#9660;</span>
-            </div>
+              <span class="chapter-arrow" aria-hidden="true">&#9660;</span>
+            </button>
             <div class="excerpt-box" id="ch3" style="display:none;">
               <p>Yuki didn't remember falling asleep. When she woke, it was still dark. The kind of dark that felt thin. Like something was about to break through it...</p>
               <p>Her reflection stared back at her from the bathroom mirror. Messy hair. Tired eyes. Pale face. Real. Grounded. Then — her stomach dropped. Her reflection was gone. The mirror didn't show her. It showed someone else. Standing where she should've been. Tall. Still. Faceless.</p>
               <p>Knock. <em>...Knock.</em> ...... <em>knock.</em></p>
             </div>
 
-            <div class="chapter-item" style="opacity:0.5; cursor:default;">
+            <div class="chapter-item chapter-item--locked" aria-disabled="true">
               <div>
                 <div class="chapter-num">Chapter 4</div>
                 <div class="chapter-name">Coming Soon...</div>
               </div>
-              <span class="chapter-arrow" style="color:var(--accent);">&#9654;</span>
+              <span class="chapter-arrow" aria-hidden="true" style="color:var(--accent);">&#9654;</span>
             </div>
           </div>
 
@@ -300,5 +300,22 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Before Dawn",
+    "author": {
+      "@type": "Person",
+      "name": "Tiana Luck",
+      "url": "https://tianaluck.co.za/"
+    },
+    "description": "A supernatural mystery where a girl stranded in a fog-shrouded town must survive until dawn.",
+    "genre": ["Supernatural Fiction", "Mystery", "Horror"],
+    "inLanguage": "en-ZA",
+    "url": "https://tianaluck.co.za/books.html",
+    "image": "https://tianaluck.co.za/images/before_dawn_cover.png"
+  }
+  </script>
 </body>
 </html>
