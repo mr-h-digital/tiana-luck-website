@@ -617,6 +617,11 @@ html.light-mode .nav-logo-light { opacity: 1; }
 html.light-mode .bg-video-dark  { opacity: 0; pointer-events: none; }
 html.light-mode .bg-video-light { opacity: 1; }
 
+/* Poster frame fills the slot instantly — browser shows it before
+   the first video frame arrives, eliminating the black-screen flash. */
+.bg-video-dark  { background-size: cover; background-position: center; }
+.bg-video-light { background-size: cover; background-position: center; }
+
 /* --- Gradient overlay for readability --- */
 .hero-overlay {
   position: absolute;

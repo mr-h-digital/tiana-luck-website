@@ -49,30 +49,66 @@
   const lightVideo = document.querySelector('.bg-video-light');
   if (!darkVideo || !lightVideo) return;
 
-  const RATE            = 0.7;
-  const TRANSITION_MS   = 800; // matches CSS transition duration
-  const html            = document.documentElement;
+  const RATE         = 0.7;
+  const TRANSITION_MS = 800;
+  const html         = document.documentElement;
 
-  // Respect reduced-motion — freeze both, show active one statically
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    [darkVideo, lightVideo].forEach(v => v.pause());
-    return;
-  }
+  // Respect reduced-motion — poster images remain, videos never play
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   function play(v) {
     v.playbackRate = RATE;
     v.play().catch(() => {});
   }
 
-  // Start both immediately — opacity CSS hides the inactive one.
-  // Both playing means zero seek delay when theme switches.
-  play(darkVideo);
-  play(lightVideo);
+  // Fade the video in only once the browser has enough data to play
+  // smoothly — eliminates the black flash on slow connections.
+  function playWhenReady(v) {
+    if (v.readyState >= 3) { // HAVE_FUTURE_DATA
+      play(v);
+    } else {
+      v.addEventListener('canplay', () => play(v), { once: true });
+    }
+  }
+
+  // Lazy-load the inactive video's src — the <video> element carries
+  // a poster= so the user sees the still image immediately.
+  // We only set src (triggering the download) when the theme actually
+  // switches to that mode for the first time.
+  const lightSrc = lightVideo.src || lightVideo.getAttribute('src') || '';
+  const darkSrc  = darkVideo.src  || darkVideo.getAttribute('src')  || '';
+  const isLight  = () => html.classList.contains('light-mode');
+
+  // Strip the inactive video's src on load so the browser doesn't
+  // start fetching the 84 MB light file on a dark-mode page visit.
+  if (!isLight()) {
+    lightVideo.removeAttribute('src');
+    lightVideo.load(); // reset to poster state
+  } else {
+    darkVideo.removeAttribute('src');
+    darkVideo.load();
+  }
+
+  let lightLoaded = isLight();
+  let darkLoaded  = !isLight();
+
+  function ensureLoaded(v, src, cb) {
+    if (v.src && v.src !== window.location.href) { cb(); return; }
+    v.src = src;
+    v.load();
+    v.addEventListener('canplay', cb, { once: true });
+  }
+
+  // Start the active video immediately
+  if (!isLight()) {
+    playWhenReady(darkVideo);
+  } else {
+    playWhenReady(lightVideo);
+  }
 
   let willChangeTimer = null;
 
   function syncPlayback() {
-    // Activate will-change only for the duration of the crossfade
     clearTimeout(willChangeTimer);
     darkVideo.style.willChange  = 'opacity';
     lightVideo.style.willChange = 'opacity';
@@ -81,32 +117,28 @@
       lightVideo.style.willChange = 'auto';
     }, TRANSITION_MS + 100);
 
-    // Pause the outgoing video after the transition completes to save battery
-    const isLight   = html.classList.contains('light-mode');
-    const outgoing  = isLight ? darkVideo  : lightVideo;
-    const incoming  = isLight ? lightVideo : darkVideo;
+    const light    = isLight();
+    const outgoing = light ? darkVideo  : lightVideo;
+    const incoming = light ? lightVideo : darkVideo;
+    const inSrc    = light ? lightSrc   : darkSrc;
 
-    play(incoming);
+    // Load and play the incoming video (first switch only triggers download)
+    ensureLoaded(incoming, inSrc, () => play(incoming));
+
     setTimeout(() => {
-      // Only pause if it's still the inactive theme after the fade
-      if (html.classList.contains('light-mode') === isLight) outgoing.pause();
+      if (isLight() === light) outgoing.pause();
     }, TRANSITION_MS + 50);
   }
 
-  // Watch for theme class changes
   const observer = new MutationObserver(syncPlayback);
   observer.observe(html, { attributes: true, attributeFilter: ['class'] });
 
-  // Initial sync on load
-  syncPlayback();
-
-  // Pause/resume on tab visibility
   document.addEventListener('visibilitychange', () => {
-    const active = html.classList.contains('light-mode') ? lightVideo : darkVideo;
+    const active = isLight() ? lightVideo : darkVideo;
     if (document.hidden) {
       active.pause();
     } else {
-      play(active);
+      playWhenReady(active);
     }
   });
 })();
