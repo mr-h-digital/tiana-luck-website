@@ -154,19 +154,26 @@
   `;
   links.appendChild(socials);
 
+  let savedScrollY = 0;
   function openNav() {
+    savedScrollY = window.scrollY;
+    document.body.style.top = `-${savedScrollY}px`;
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
     links.classList.add('open');
     toggle.classList.add('open');
     toggle.setAttribute('aria-expanded', 'true');
     toggle.setAttribute('aria-label', 'Close menu');
-    document.body.style.overflow = 'hidden';
   }
   function closeNav() {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, savedScrollY);
     links.classList.remove('open');
     toggle.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', 'Open menu');
-    document.body.style.overflow = '';
   }
 
   toggle.addEventListener('click', () => {

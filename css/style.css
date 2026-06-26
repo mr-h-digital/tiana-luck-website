@@ -425,12 +425,26 @@ ul { list-style: none; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  transition: background var(--transition), backdrop-filter var(--transition);
+  transition: background var(--transition);
+}
+/* backdrop-filter lives on a pseudo-element so the header never becomes
+   a containing block for position:fixed children (Android Chrome bug where
+   backdrop-filter on a parent traps fixed descendants). */
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  backdrop-filter: blur(0px);
+  transition: backdrop-filter var(--transition);
+  pointer-events: none;
 }
 .site-header.scrolled {
   background: var(--nav-scrolled);
-  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
+}
+.site-header.scrolled::before {
+  backdrop-filter: blur(12px);
 }
 .navbar {
   display: flex;
